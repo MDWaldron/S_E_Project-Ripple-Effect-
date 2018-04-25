@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+ <head>
+ <meta charset = "UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Password Reset</title>
+ <link rel = "stylesheet" type = "text/css" href ="ResetPass.css"/>
+
+ </head>
+ <body>
+
+
+<form action="/ResetInfo.php">
+  <div class="imgcontainer">
+    <img src="../Pictures/RippleEffectLogo.png" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <h2> Request Password Reset </h2>
+    <label for="email"><b>Email</b></label>
+    <input type="email" placeholder="Enter Email" name="email" required>
+        
+    <button type="submit">Submit</button>
+  </div>
+
+  <!--This section is for the lower part of the page containing the forgot password section and cancel button-->
+  <div class="container" style="background-color:#f1f1f1">
+    <a href="../HomePage/HomePage.html">
+      <button type="button" class="cancelbutton">Cancel</button>
+    </a>
+  </div>
+</form>
+
+</body>
+</html>

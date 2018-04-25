@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+ <head>
+ <meta charset = "UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Create Vendor</title>
+ <link rel = "stylesheet" type = "text/css" href ="CreateAccountVendor.css"/>
+
+ </head>
+ <body>
+
+
+<form action="/CreateAccount.php">
+  <div class="imgcontainer">
+    <img src="../Pictures/RippleEffectLogo.png" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+    <label for="passw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="passw" required>
+    <label for="address"><b>Business Address</b></label>
+    <input type="text" placeholder="Business Address" name="address" required>
+    <label for="state"><b>State</b></label>
+    <input type="text" placeholder="State" name="state" required>
+    <label for="zip"><b>Zip code</b></label>
+    <input type="text" placeholder="Zip Code" name="zip" required>
+        
+    <button type="submit">Create Account</button>
+  </div>
+
+  <!--This section is for the lower part of the page containing the forgot password section and cancel button-->
+  <div class="container" style="background-color:#f1f1f1">
+    <a href="../HomePage/HomePage.html">
+      <button type="button" class="cancelbutton">Cancel</button>
+    </a>
+  </div>
+</form>
+
+</body>
+</html>
