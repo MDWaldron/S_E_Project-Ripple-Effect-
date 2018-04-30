@@ -7,7 +7,7 @@ CREATE TABLE STUDENT(
     Username            varchar(25)     CHARACTER SET utf8      NOT NULL,
     Password            varchar(16)     CHARACTER SET utf8      NOT NULL,
     Email               varchar(50)     CHARACTER SET utf8      NOT NULL,
-    S_Phone_Number      int(10)         CHARACTER SET utf8      NOT NULL,
+    S_Phone_Number      int(11)         CHARACTER SET utf8      NOT NULL,
 PRIMARY KEY (S_ID)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1
 
