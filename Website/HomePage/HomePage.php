@@ -83,12 +83,18 @@
 			</table>
 			-->
 
-
-<?php    
+<!-- Creates a Table from SQL -->
+<?php 
 	$sql = "SELECT V_Name, V_Address, V_Phone_Number, V_Service FROM vendor";
 	$result = mysqli_query($db, $sql) or die(mysql_error());
 		echo "<table>";
-		while($row = mysqli_fetch_assoc($result)){
+		echo "<table id='myTable'>
+				<th><a href='?C=N;O=D'>Name</a></th>
+				<th><a href='?C=M;O=A'>Service Type</a></th>
+				<th><a href='?C=S;O=A'>Price</a></th>
+				<th><a href='?C=D;O=A'>Location</a></th>
+				<tr><th colspan='5'><hr></th></tr>";
+			while($row = mysqli_fetch_assoc($result)){
 			$VName = $row['V_Name'];
 			$VAddress = $row['V_Address'];
 			$VPN = $row['V_Phone_Number'];
@@ -102,6 +108,7 @@
 
 		
 <!--
+
 <?php
 	if($_SERVER["REQUEST_METHOD"] == "GET"){
     $V_Name = mysqli_real_escape_string($db,$_GET['V_Service']);
