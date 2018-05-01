@@ -24,10 +24,10 @@
         <input type="text" placeholder="Enter Business Name" name="bname" required/>
         <input type="text" placeholder="Enter Username" name="username" required/>
         <input type="password" placeholder="Enter Password" name="password" required/>
-        <input type="text" placeholder="Enter Email" name="email" required/>
+        <input type="email" placeholder="Enter Email (ex. admin@admin.com)" name="email" required/>
         <input type="text" placeholder="Business Address" name="address" required/>
         <input type="text" placeholder="State" name="state" required/>
-        <input type="text" placeholder="Business Number" name="Phonenumber" required/>
+        <input type="text" placeholder="Business Number (ex. 1234567890)" name="Phonenumber" required/>
         <input type="text" placeholder="Service Offerred" name="service" required/>
         <button method="POST">Create Vendor Account</button>
         <p class="message">Are you a User? <a href="CreateAccount.php">Click Here!</a></p>
