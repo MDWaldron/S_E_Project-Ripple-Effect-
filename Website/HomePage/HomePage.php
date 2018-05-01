@@ -1,11 +1,11 @@
 <?php
-	include('../session.php');
 	include('../config.php');
+	include('../session.php');
 ?>
 
 <html>
 	<head>
-		<title> RippleEffect </title>
+		<title> Ripple Effect </title>
 		<body bgcolor="#bfbfbf">
 			<h1 align= "center"><font size="24"> Ripple Effect</font></h1>
 <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
@@ -66,24 +66,48 @@
 	<div id="tfheader">
 		<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for vendor..">
 	</div>
-<div class="vendorimages">
-	<form action="" method = "get">
-<table id="myTable">
-	<tr>
-	<td>
-	<button name= "Service" type="submit" value = "Service1";><img src="Vendor.jpg" style="width:228px;height:228px;"/></button></td>
-	</tr>
-	<tr>
-	<td>
-	<button name= "Service" type="submit" value = "Service2";><img src="Vendor.jpg" style="width:228px;height:228px;"/></button></td>
-	</tr>
-</table>
-</form>
+	<div class="vendorimages">
+		<form action="" method = "get">
+			<!--
+			<table id="myTable">
+				
+				<tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th>
+				<th><a href="?C=N;O=D">Name</a></th>
+				<th><a href="?C=M;O=A">Service Type</a></th>
+				<th><a href="?C=S;O=A">Price</a></th>
+				<th><a href="?C=D;O=A">Location</a></th>
+				<tr><th colspan="5"><hr></th></tr>
+				<td><button name= "Service" type="submit" value = "Service1";><img src="Vendor.jpg" style="width:50px;height:50px;"/></button></td>
+				</tr>
+				
+			</table>
+			-->
+
+
+<?php    
+	$sql = "SELECT V_Name, V_Address, V_Phone_Number, V_Service FROM vendor";
+	$result = mysqli_query($db, $sql) or die(mysql_error());
+		echo "<table>";
+		while($row = mysqli_fetch_assoc($result)){
+			$VName = $row['V_Name'];
+			$VAddress = $row['V_Address'];
+			$VPN = $row['V_Phone_Number'];
+			$VService = $row['V_Service'];
+		echo "<tr><td>".$VName."</td><td>".$VAddress."</td><td>".$VPN."</td><td>".$VService."</td></tr>";   
+		}
+		echo "</table>";
+?>
+		
+		</form>
+
+		
+<!--
 <?php
 	if($_SERVER["REQUEST_METHOD"] == "GET"){
-    $V_Name = mysqli_real_escape_string($db,$_GET['Service']);
+    $V_Name = mysqli_real_escape_string($db,$_GET['V_Service']);
     $sql = "SELECT * FROM 'VENDOR' WHERE V_Name = '$'";
     $result = mysqli_query($db,$sql);
+
     $row = mysqli_fetch_array($result);
     $count = mysqli_num_rows($result);
     if($count !=0) {
@@ -92,6 +116,8 @@
  }
 }
 ?>
+-->
+
 <script>
 function myFunction() {
   // Declare variables 
