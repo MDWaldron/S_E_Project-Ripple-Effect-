@@ -23,10 +23,10 @@
         <form class="vendor-form" method="POST">
         <input type="text" placeholder="Username" name="username" required/>
         <input type="password" placeholder="Password" name="password" required/>
-        <input type="text" placeholder="Email" name="email" required/>
+        <input type="email" placeholder="Email (ex. admin@admin.com)" name="email" required/>
         <input type="text" placeholder="First Name" name="fname" required/>
         <input type="text" placeholder="Last Name" name="lname" required/>
-        <input type="text" placeholder="Phone Number" name="pnumber" required/>
+        <input type="text" placeholder="Phone Number (ex. 1234567890)" name="pnumber" required/>
         <button method="POST">Create Account</button>
         <p class="message">Are you a Vendor? <a href="CreateAccountV.php">Click Here!</a></p>
         <p class="message">Already Registered? <a href="../LoginPage/LoginPage.php">Click Here!</a></p>
